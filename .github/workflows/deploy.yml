@@ -37,4 +37,4 @@ jobs:
           name: latest-version
           path: ./downloaded-artifact
       - run: |
-          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd /domains/wassimkaouia.online/public_html && tar -xvf ./downloaded-artifact/latest-version.tar.gz'
+          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd /domains/wassimkaouia.online/public_html && unzip ./downloaded-artifact/latest-version.zip'
