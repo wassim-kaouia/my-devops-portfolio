@@ -9,7 +9,7 @@ jobs:
     name: Build and Push
     runs-on: ubuntu-latest
     steps:
-      - name: SSH Into Hostinger
+      - name: SSH into Hostinger
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
