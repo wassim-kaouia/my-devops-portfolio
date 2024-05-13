@@ -12,6 +12,12 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v3
 
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: latest-version
+          path: .
+
       - name: SSH into Hostinger
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -20,9 +26,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            sudo -i
             cd domains/wassimkaouia.online/public_html
-            rm -rf * 
-            git clone https://github.com/wassim-kaouia/my-devops-portfolio.git
+            rm -rf *
 
       - run: echo "ok Deployed !"
