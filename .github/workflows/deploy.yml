@@ -9,6 +9,6 @@ jobs:
     name: Build and Push
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Host > ${{ host }}"
-    env:
-      host: ${{ secrets.HOST }}
+      - run: echo "Host > ${{ myhost }}"
+        env:
+          myhost: ${{ secrets.HOST }}
