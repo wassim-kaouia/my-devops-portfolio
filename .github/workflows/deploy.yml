@@ -9,11 +9,6 @@ jobs:
     name: Build and Push
     runs-on: ubuntu-latest
     steps:
-      - name: first step
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: whoami
+      - run: echo "Host:$env:host"
+    env:
+      host: ${{ secrets.HOST }}
