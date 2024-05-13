@@ -9,6 +9,17 @@
 
 <body>
     <h2>Hello Rania on Hostinger ! Deployment OK Douki !</h2>
+
+    - name: SSH into Hostinger and deploy
+    uses: appleboy/ssh-action@v1.0.3
+    with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USERNAME }}
+    password: ${{ secrets.PASSWORD }}
+    port: ${{ secrets.PORT }}
+    script: |
+    cd domains/wassimkaouia.online/public_html
+    rm -rf *
 </body>
 
 </html>
