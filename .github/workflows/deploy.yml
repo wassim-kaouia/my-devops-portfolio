@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: cd public_html && git pull origin main
+          script: cd public_html && git clone https://github.com/wassim-kaouia/my-devops-portfolio.git && ls -l
