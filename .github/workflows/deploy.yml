@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: cd domains && ls -l
+          script: cd domains && git clone https://github.com/wassim-kaouia/my-devops-portfolio.git wassimkaouia.online && cd wassimkaouia.online && ls -l
