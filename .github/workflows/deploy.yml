@@ -11,4 +11,4 @@ jobs:
     steps:
       - run: echo "Host > $myhost"
         env:
-          myhost: ${{ secrets.HOST }}
+          myhost: ${{ secrets.GITHUB_TOKEN }}
