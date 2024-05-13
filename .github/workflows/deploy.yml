@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: cd domains/wassimkaouia.online && touch hello.html && ls -l
+          script: cd domains/wassimkaouia.online/public_html && rm -rf * && ls -l
       - run: echo "ok Deployed !"
