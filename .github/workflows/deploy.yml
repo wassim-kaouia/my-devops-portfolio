@@ -9,6 +9,11 @@ jobs:
     name: Build and Push
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Host > $myhost"
-        env:
-          myhost: ${{ secrets.MYFULLNAME }}
+      - name: SSH Into Hostinger
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: whoami
