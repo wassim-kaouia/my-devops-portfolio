@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: cd domains/wassimkaouia.online/public_html && rm -rf *  && git clone https://github.com/wassim-kaouia/my-devops-portfolio.git public_html
+          script: cd domains/wassimkaouia.online/public_html && rm -rf *  && git clone https://github.com/wassim-kaouia/my-devops-portfolio.git
       - run: echo "ok Deployed !"
