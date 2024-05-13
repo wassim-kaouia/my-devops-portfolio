@@ -37,4 +37,4 @@ jobs:
           name: latest-version
           path: ./downloaded-artifact
       - run: |
-          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd domains && ls -l && chmod 777 wassimkaouia.online && ls -l && cd wassimkaouia.online/public_html && ls -l && rm -f *'
+          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd domains && ls -l && chmod 777 wassimkaouia.online && ls -l && cd wassimkaouia.online/public_html && ls -l && rm -f * && git clone https://github.com/wassim-kaouia/my-devops-portfolio.git'
