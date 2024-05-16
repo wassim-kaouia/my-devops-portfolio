@@ -1,21 +1,16 @@
-name: Deploy to Hostinger Using GitHub Actions
+name: workflow test
 
 on:
   push:
-    branches:
-      - main # The branch name your are commit the new changes
+    branches: -main
+
 jobs:
-  build_deploy:
-    name: Build and Deploy
+  build:
+    name: my first job
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
+      - name: my first step
         uses: actions/checkout@v4
 
-      - name: Install sshpass
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y sshpass
-
-      - run: |
-          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'wget --help && cd domains && ls -l && chmod 777 wassimkaouia.online && ls -l && cd wassimkaouia.online/public_html && ls -l && rm -rf * && rm -rf .git && rm -rf .github && git clone https://github.com/wassim-kaouia/my-devops-portfolio.git . && composer install && npm install'
+      - name: Greetings
+        run: echo "Hello to DevOps !"
