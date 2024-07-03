@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('openings', function (Blueprint $table) {
             $table->id();
+            $table->string('full_name');
+            $table->string('first_role');
+            $table->string('second_role');
+            $table->string('third_role');
+            $table->text('github');
+            $table->text('youtube');
+            $table->text('linkedin');
+            $table->text('instagram');
             $table->timestamps();
         });
     }
