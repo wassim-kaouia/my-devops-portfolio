@@ -23,6 +23,8 @@
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
+            @include('sweetalert::alert')
+
             <div class="page-content">
                 <!-- Start content -->
                 <div class="container-fluid">
