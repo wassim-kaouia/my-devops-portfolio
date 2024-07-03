@@ -213,7 +213,7 @@
                                 <li class="list-group-item py-3">
                                     <div class="d-flex">
                                         <div class="me-3">
-                                            <img src="assets/images/small/img-2.jpg" alt="" class="avatar-md h-auto d-block rounded">
+                                            <img src="{{ URL::asset('assets/images/small/img-2.jpg')}}" alt="" class="avatar-md h-auto d-block rounded">
                                         </div>
                                         
                                         <div class="align-self-center overflow-hidden me-auto">
@@ -878,17 +878,4 @@
 </div>
 <!-- end row -->
 
-
-@endsection
-@section('script')
-    <!-- JAVASCRIPT -->
-    <script src="{{URL::asset('build/libs/jquery/jquery.min.js')}}"></script>
-    <script src="{{URL::asset('build/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ URL::asset('build/libs/metismenu/metisMenu.min.js')}}"></script>
-    <script src="{{ URL::asset('build/libs/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ URL::asset('build/libs/node-waves/waves.min.js') }}"></script>
-  <!-- apexcharts -->
-  <script src="{{ URL::asset('build/libs/apexcharts/apexcharts.min.js')}}"></script>
-<!-- dashboard init -->
-<script src="{{ URL::asset('build/js/pages/dashboard.init.js') }}"></script>
 @endsection
