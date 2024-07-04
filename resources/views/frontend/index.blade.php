@@ -97,7 +97,7 @@
 				<img src="/images/my-photo.jpg" width="108" alt="Wassim" class="mb-4" />
 
 				<!-- info -->
-				<h1 class="mb-2 mt-0">{{ $opening->full_name == null ? '' : $opening->full_name }}</h1>
+				<h1 class="mb-2 mt-0">{{ !$opening->full_name ? '' : $opening->full_name }}</h1>
 				<span>I'm a <span class="text-rotating">{{ $opening->first_role }}, {{ $opening->second_role }}, {{ $opening->third_role }} lover</span></span>
 
 				<!-- social icons -->
