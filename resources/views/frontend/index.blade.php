@@ -98,7 +98,7 @@
 
 				<!-- info -->
 				<h1 class="mb-2 mt-0">{{ empty($opening) ? '' : $opening->full_name }}</h1>
-				<span>I'm a <span class="text-rotating">{{empty($opening) ? '' : $opening->first_role }}, {{ $opening->second_role }}, {{ $opening->third_role }} lover</span></span>
+				<span>I'm a <span class="text-rotating">{{empty($opening) ? '' : $opening->first_role }}, {{empty($opening) ? '' : $opening->second_role }}, {{ empty($opening) ? '' : $opening->third_role }} lover</span></span>
 
 				<!-- social icons -->
 				<ul class="social-icons light list-inline mb-0 mt-4">
@@ -206,7 +206,7 @@
 										<span class="float-right">{{empty($about) ? '' : $about->range2 }}%</span>
 									</div>
 									<div class="progress">
-										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{$about->range2 }}" data-color="#FF4C60">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{empty($about) ? '' : $about->range2 }}" data-color="#FF4C60">
 										</div>
 									</div>
 									<div class="spacer" data-height="20"></div>
@@ -219,7 +219,7 @@
 										<span class="float-right">{{empty($about) ? '' : $about->range3 }}%</span>
 									</div>
 									<div class="progress">
-										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{$about->range3 }}" data-color="#6C6CE5">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{empty($about) ? '' : $about->range3 }}" data-color="#6C6CE5">
 										</div>
 									</div>
 								</div>
