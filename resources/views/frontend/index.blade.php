@@ -179,7 +179,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<!-- about text -->
-								<p>{{ $about->description }}</p>
+								<p>{{empty($about) ? '' : $about->description }}</p>
 								<div class="mt-3">
 									<a href="{{ URL::asset('../cv_attachments/'.empty($about) ? '' : $about->cv) }}" class="btn btn-default">Download CV</a>
 								</div>
