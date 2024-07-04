@@ -169,7 +169,7 @@
 				<div class="col-md-3">
 					<div class="text-center text-md-left">
 						<!-- avatar image -->
-						<img src="{{ URL::asset('../photo_attachments/'.$about->photo) }}" width="150" alt="Bolby" />
+						<img src="{{ URL::asset('../photo_attachments/'. empty($about) ? '' : $about->photo) }}" width="150" alt="Bolby" />
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 				</div>
@@ -181,7 +181,7 @@
 								<!-- about text -->
 								<p>{{ $about->description }}</p>
 								<div class="mt-3">
-									<a href="{{ URL::asset('../cv_attachments/'.$about->cv) }}" class="btn btn-default">Download CV</a>
+									<a href="{{ URL::asset('../cv_attachments/'.empty($about) ? '' : $about->cv) }}" class="btn btn-default">Download CV</a>
 								</div>
 								<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 							</div>
