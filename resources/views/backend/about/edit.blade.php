@@ -21,7 +21,7 @@
                     <div class="row mb-4">
                         <label for="title-input" class="col-sm-3 col-form-label">Title</label>
                         <div class="col-sm-9">
-                          <input type="text" name="title" class="form-control" value="{{ empty($about) ? '' : $about->title : '' }}" id="title-input" placeholder="Enter a title ">
+                          <input type="text" name="title" class="form-control" value="{{ empty($about) ? '' : $about->title }}" id="title-input" placeholder="Enter a title ">
                         </div>
                     </div>
                    
