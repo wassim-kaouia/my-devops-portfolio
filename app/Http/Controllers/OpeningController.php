@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Opening;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\File;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class OpeningController extends Controller

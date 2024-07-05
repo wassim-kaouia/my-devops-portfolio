@@ -50,4 +50,8 @@ class User extends Authenticatable implements MustVerifyEmail
     public function opening(){
         $this->hasOne(Opening::class);
     }
+
+    public function achievment(){
+        $this->hasOne(Achievment::class);
+    }
 }

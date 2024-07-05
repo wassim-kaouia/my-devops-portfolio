@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Wassim's Portfolio</title>
-	<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
+	<meta name="description" content="Wassim Kaouia - Portfolio/CV">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="https://via.placeholder.com/32x32">
 
@@ -262,7 +262,7 @@
 					<div class="fact-item">
 						<span class="icon icon-fire"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">198</em></h3>
+							<h3 class="mb-0 mt-0 number"><em class="count">{{ empty($achievment) ? '' : $achievment->projects }}</em></h3>
 							<p class="mb-0">Projects completed</p>
 						</div>
 					</div>
@@ -274,7 +274,7 @@
 					<div class="fact-item">
 						<span class="icon icon-cup"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">5670</em></h3>
+							<h3 class="mb-0 mt-0 number"><em class="count">{{ empty($achievment) ? '' : $achievment->coffees }}</em></h3>
 							<p class="mb-0">Cup of coffee</p>
 						</div>
 					</div>
@@ -286,7 +286,7 @@
 					<div class="fact-item">
 						<span class="icon icon-people"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">427</em></h3>
+							<h3 class="mb-0 mt-0 number"><em class="count">{{ empty($achievment) ? '' : $achievment->satisfied }}</em></h3>
 							<p class="mb-0">Satisfied clients</p>
 						</div>
 					</div>
@@ -298,8 +298,8 @@
 					<div class="fact-item">
 						<span class="icon icon-badge"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">35</em></h3>
-							<p class="mb-0">Nominees winner</p>
+							<h3 class="mb-0 mt-0 number"><em class="count">{{ empty($achievment) ? '' : $achievment->feedback }}</em></h3>
+							<p class="mb-0">Positive Feedbacks</p>
 						</div>
 					</div>
 				</div>

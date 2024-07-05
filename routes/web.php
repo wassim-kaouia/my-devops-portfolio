@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\About;
+use App\Models\Achievment;
 use App\Models\Opening;
 
 /*
@@ -18,9 +19,11 @@ use App\Models\Opening;
 Route::get('/', function () {
     $about = About::first();
     $opening = Opening::first();
+    $achievment = Achievment::first();
     return view('frontend.index',[
         'about' => $about,
         'opening' => $opening,
+        'achievment' => $achievment
     ]);
 });
 
@@ -45,3 +48,7 @@ Route::post('/dashboard/opening/edit/', [App\Http\Controllers\OpeningController:
 //About section
 Route::get('/dashboard/about/page', [App\Http\Controllers\AboutController::class, 'index'])->name('indexAbout');
 Route::post('/dashboard/about/edit/', [App\Http\Controllers\AboutController::class, 'edit'])->name('editAbout');
+
+//Achievments section
+Route::get('/dashboard/achievment/page', [App\Http\Controllers\AchievmentController::class, 'index'])->name('indexAchievment');
+Route::post('/dashboard/achievment/edit/', [App\Http\Controllers\AchievmentController::class, 'edit'])->name('editAchievment');

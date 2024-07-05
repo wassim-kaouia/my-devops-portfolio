@@ -21,11 +21,21 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-home-circle"></i>
+                        <i class="bx bxs-user-detail"></i>
                         <span key="t-dashboards">About section</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('indexAbout') }}" key="t-default">Edit</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bxs-user-detail"></i>
+                        <span key="t-dashboards">Achievments section</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('indexAchievment') }}" key="t-default">Edit</a></li>
                     </ul>
                 </li>
 
