@@ -169,7 +169,7 @@
 				<div class="col-md-3">
 					<div class="text-center text-md-left">
 						<!-- avatar image -->
-						<img src="{{ URL::asset('../photo_attachments/'. empty($about) ? '' : $about->photo) }}" width="150" alt="Bolby" />
+						<img src="{{ URL::asset('photo_attachments/'. empty($about) ? '' : $about->photo) }}" width="150" alt="Bolby" />
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 				</div>
