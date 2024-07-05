@@ -67,7 +67,7 @@ class AboutController extends Controller
                 } 
             }
         }
-
+        
         if ($request->hasFile('photo')){
             //get image extension and add time to its name 
             $myphoto = time() . '.' . $request->photo->extension();
