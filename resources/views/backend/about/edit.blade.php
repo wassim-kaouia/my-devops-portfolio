@@ -37,7 +37,7 @@
                         <label for="photo-input" class="col-sm-3 col-form-label">Profile Photo</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="file" id="formFile" name="photo">
-                            <img src="{{ empty($about) ? '' : URL::asset('photo_attachments/' . $about->photo) }}" width="80" alt="">
+                            <img class="mt-2" src="{{ empty($about) ? '' : URL::asset('photo_attachments/' . $about->photo) }}" width="80" alt="">
                         </div>
                     </div>
 
