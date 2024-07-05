@@ -31,7 +31,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-medal"></i>
+                        <i class="bx bxs-medal"></i>
                         <span key="t-dashboards">Achievments section</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
