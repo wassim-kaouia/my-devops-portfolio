@@ -169,7 +169,7 @@
 				<div class="col-md-3">
 					<div class="text-center text-md-left">
 						<!-- avatar image -->
-						<img src="{{ URL::asset('photo_attachments/'. empty($about) ? 'https://imgs.search.brave.com/7LH9mSHFchwDRyeBSb9eK1ttHuZ10HSuv-EN1Qq7pK4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vdWNo/LWNkbjIuaWNvbnM4/LmNvbS9xcFlST2JX/VEhTaEJnMXpwUXpf/NXhBWFd6cXh3d01K/T1l1ZDZ5TkdmOFdV/L3JzOmZpdDozNjg6/MzY4L2N6TTZMeTlw/WTI5dWN6Z3UvYjNW/amFDMXdjbTlrTG1G/ei9jMlYwY3k5emRt/Y3ZNamc0L0x6SXda/bU01WlRVMUxUUXkv/T1dJdE5EZ3pOUzFo/T0dKbS9MVFkyTWpF/NE5tRm1PV0UzL1lT/NXpkbWMucG5n' : $about->photo) }}" width="150" alt="Wassim" />
+						<img src="{{ empty($about) ? '/images/1689045779.png' : URL::asset('photo_attachments/'. $about->photo) }}" width="150" alt="Wassim" />
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 				</div>
