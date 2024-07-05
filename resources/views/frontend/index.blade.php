@@ -181,7 +181,7 @@
 								<!-- about text -->
 								<p>{{empty($about) ? '' : $about->description }}</p>
 								<div class="mt-3">
-									<a href="{{ URL::asset('cv_attachments/'.empty($about) ? '' : $about->cv) }}" class="btn btn-default">Download CV</a>
+									<a href="{{empty($about) ? '#' : URL::asset('cv_attachments/'.$about->cv) }}" class="btn btn-default">Download CV</a>
 								</div>
 								<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 							</div>
