@@ -45,7 +45,7 @@
                         <label for="cv-input" class="col-sm-3 col-form-label">CV</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="file" id="formFile" name="cv">
-                            <span class="text-primary mt-2"><a href="{{empty($about) ? '#' : URL::asset('cv_attachments/'.$about->cv) }}">Preview The CV</a></span>
+                            <a class="text-primary mt-2" href="{{empty($about) ? '#' : URL::asset('cv_attachments/'.$about->cv) }}">Preview The CV</a>
                         </div>
                     </div>
 
