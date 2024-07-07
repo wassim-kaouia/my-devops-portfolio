@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title> @yield('title') | Skote - Admin & Dashboard Template</title>
+    <title> @yield('title') | Wassim's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="My custom portfolio" name="description" />
+    <meta content="WassDev" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('build/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('myfavicon/favicon.ico') }}">
     @include('layouts.head-css')
 </head>
 

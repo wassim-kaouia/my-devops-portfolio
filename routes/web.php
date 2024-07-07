@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\About;
 use App\Models\Achievment;
 use App\Models\Opening;
+use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,15 @@ Route::get('/', function () {
     $about = About::first();
     $opening = Opening::first();
     $achievment = Achievment::first();
+
+    $colors = ['#6C6CE5' , '#F9D74C' , '#F97B8B'];
+    $services = Service::all();
     return view('frontend.index',[
         'about' => $about,
         'opening' => $opening,
-        'achievment' => $achievment
+        'achievment' => $achievment,
+        'services' => $services,
+        'colors' => $colors
     ]);
 });
 
@@ -52,3 +58,10 @@ Route::post('/dashboard/about/edit/', [App\Http\Controllers\AboutController::cla
 //Achievments section
 Route::get('/dashboard/achievment/page', [App\Http\Controllers\AchievmentController::class, 'index'])->name('indexAchievment');
 Route::post('/dashboard/achievment/edit/', [App\Http\Controllers\AchievmentController::class, 'edit'])->name('editAchievment');
+
+//Service section
+Route::get('/dashboard/services/index', [App\Http\Controllers\ServiceController::class, 'index'])->name('indexServices');
+Route::get('/dashboard/services/showCreate', [App\Http\Controllers\ServiceController::class, 'showCreatePage'])->name('showCreateService');
+Route::post('/dashboard/service/create/', [App\Http\Controllers\ServiceController::class, 'create'])->name('createService');
+Route::get('/dashboard/service/show/{id}', [App\Http\Controllers\ServiceController::class, 'show'])->name('showService');
+Route::post('/dashboard/service/edit/', [App\Http\Controllers\ServiceController::class, 'edit'])->name('editService');

@@ -5,7 +5,7 @@
 	<title>Wassim's Portfolio</title>
 	<meta name="description" content="Wassim Kaouia - Portfolio/CV">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="https://via.placeholder.com/32x32">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('myfavicon/favicon.ico') }}">
 
 	<!-- STYLESHEETS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
@@ -321,35 +321,23 @@
 			<div class="spacer" data-height="60"></div>
 			
 			<div class="row">
-
+				@foreach ($services as $key => $service)
+				@php
+					$color = $colors[$key % count($colors)];
+				@endphp
 				<div class="col-md-4">
 					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#6C6CE5">
-						<img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
-						<h3 class="mb-3 mt-0">UI/UX design</h3>
-						<p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>
+					<div class="service-box rounded data-background padding-30 text-center {{ $colors[$key] == '#6C6CE5' ? 'text-light' : ''}} shadow-blue" data-color="{{ $color }}">
+						<img src="{{ URL::asset('service_images_attachments/'.$service->service_image) }}" alt="{{ $service->title }}" width="150" />
+						<h3 class="mb-3 mt-0">{{ $service->title }}</h3>
+						<p class="mb-0">{{ $service->description }}</p>
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 				</div>
+				@endforeach
 
-				<div class="col-md-4">
-					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C">
-						<img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
-						<h3 class="mb-3 mt-0">Web Development</h3>
-						<p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>
-					</div>
-					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
-				</div>
 
-				<div class="col-md-4">
-					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center text-light shadow-pink" data-color="#F97B8B">
-						<img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
-						<h3 class="mb-3 mt-0">Photography</h3>
-						<p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.</p>
-					</div>
-				</div>
+			
 
 			</div>
 

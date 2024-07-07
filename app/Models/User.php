@@ -54,4 +54,8 @@ class User extends Authenticatable implements MustVerifyEmail
     public function achievment(){
         $this->hasOne(Achievment::class);
     }
+
+    public function services(){
+        $this->hasMany(Service::class);
+    }
 }
